@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box
+}
+
+html {
+  font-family: sans-serif
+}
+
+body {
+  margin: 0
+}
+
+.main-container {background-color: #232323; height: 100vh; padding: 40px 20px}

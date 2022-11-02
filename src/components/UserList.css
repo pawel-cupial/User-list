@@ -1,0 +1,4 @@
+.user-list {background-color: #fff; max-width: 650px; margin: 0 auto; padding: 20px; border-radius: 10px}
+.user-list ul {list-style-type: none; padding: 0}
+.user-list li {border: 1px solid #c3c3c3; padding: 10px; font-weight: bold}
+.user-list li:not(:last-child) {margin-bottom: 10px}
