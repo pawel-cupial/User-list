@@ -5,7 +5,11 @@ const UserList = (props) => {
     return (
         <div className="user-list">
             <ul>
-                <li></li>
+                {props.users.map((user) => (
+                    <li key={user.id}>
+                        {user.name}, {user.age}
+                    </li>
+                ))}
             </ul>
         </div>
     )

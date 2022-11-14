@@ -2,7 +2,7 @@ import React from 'react';
 import  { useState } from 'react';
 import './AddUserForm.css';
 
-const AddUserForm =  () => {
+const AddUserForm =  (props) => {
     const [userName, setUserName] = useState('');
     const [userAge, setUserAge] = useState('');
     const userNameHandler = (e) => {
@@ -19,13 +19,13 @@ const AddUserForm =  () => {
         if(userAge < 1) {
              return alert('Enter a valid age');
         }
-        console.log(userName, userAge);
+        props.onAddUser(userName, userAge);
         setUserName('');
         setUserAge('');
     }
 
     return (
-        <div>
+        <React.Fragment>
             <form className="add-user-form" onSubmit={submitHandler}>
                 <label htmlFor="username" id="username"><b>Username</b></label>
                 <input 
@@ -41,7 +41,7 @@ const AddUserForm =  () => {
                     onChange={userAgeHanlder}/>
                 <button type="submit">Add User</button>
             </form>
-        </div>
+        </React.Fragment>
     )
 }
 
